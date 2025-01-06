@@ -1,0 +1,154 @@
+/* Background and general container styling */
+.foyer-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f9f9, #ececec);
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+.foyer-list-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: titleAnimation 1s ease-out;
+}
+
+/* Wrapper for the cards */
+.foyer-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Card Styles */
+.foyer-card {
+  width: 100%;
+  max-width: 350px;
+  background: linear-gradient(145deg, #fff, #f4f6f9);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transform: scale(0.95);
+  opacity: 0;
+  animation: cardFadeIn 1s forwards;
+}
+
+.foyer-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.foyer-header {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foyer-header:hover {
+  transform: scale(1.05);
+}
+
+.foyer-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.foyer-capacity {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Bloc List Styling */
+.foyer-blocs {
+  margin-top: 10px;
+}
+
+.blocs-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.bloc-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bloc-item {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bloc-item:hover {
+  color: #2980b9;
+  transform: translateX(5px);
+}
+
+.bloc-capacity {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Hover effects for card */
+.foyer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for title and fade-in */
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .foyer-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .foyer-list-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,43 @@
+.etudiants-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #edf2f4, #8d99ae);
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2b2d42;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.etudiants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.etudiant-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etudiant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.etudiant-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.etudiant-card p {
+  font-size: 1rem;
+  color: #555;
+}

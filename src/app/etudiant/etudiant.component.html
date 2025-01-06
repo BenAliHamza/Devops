@@ -1,0 +1,11 @@
+<div class="etudiants-container">
+  <h1 class="title">List of Étudiants</h1>
+  <div class="etudiants-list" [@listAnimation]>
+    <div class="etudiant-card" *ngFor="let etudiant of etudiants">
+      <h2>{{ etudiant.nomEt }} {{ etudiant.prenomEt }}</h2>
+      <p>CIN: <strong>{{ etudiant.cin }}</strong></p>
+      <p>École: <strong>{{ etudiant.ecole }}</strong></p>
+      <p>Date de Naissance: <strong>{{ etudiant.dateNaissance }}</strong></p>
+    </div>
+  </div>
+</div>

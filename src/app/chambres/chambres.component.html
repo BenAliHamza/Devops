@@ -1,0 +1,13 @@
+<div class="chambres-container">
+  <h1 class="title">Available Chambres</h1>
+  <div class="chambres-list" [@listAnimation]>
+    <div
+      class="chambre-card"
+      *ngFor="let chambre of chambres"
+      [style.backgroundColor]="getDynamicBackgroundColor(chambre.typeC)"
+    >
+      <h2>Chambre {{ chambre.numeroChambre }}</h2>
+      <p>Type: <strong>{{ chambre.typeC }}</strong></p>
+    </div>
+  </div>
+</div>

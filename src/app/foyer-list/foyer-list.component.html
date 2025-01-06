@@ -1,0 +1,18 @@
+<div class="foyer-list-container">
+  <h1 class="foyer-list-title">Explore Our Foyers</h1>
+  <div class="foyer-cards-wrapper">
+    <div
+      class="foyer-card"
+      *ngFor="let foyer of foyers; let i = index"
+      [@cardAnimation]="i"
+      (click)="onFoyerClick(foyer)"
+    >
+      <div class="foyer-card-content">
+        <div class="foyer-header">
+          <h2 class="foyer-name">{{ foyer.nomFoyer }}</h2>
+          <p class="foyer-capacity">Capacity: {{ foyer.capaciteFoyer }} rooms</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
